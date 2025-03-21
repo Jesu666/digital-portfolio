@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact | Portfolio Resume</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS link -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: rgb(238, 147, 147);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .profile {
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 1.5s;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        .profile-photo:hover {
+            transform: scale(1.1);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        nav a:hover, nav a.active {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+        #contact {
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .popup button {
+            background: #2a5298;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .popup button:hover {
+            background: #1e3c72;
+        }
+        button {
+            background: white;
+            color: #90acdb;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        button:hover {
+            background: #ffffff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile">
+                <img src="resume.jpeg" alt="Profile Photo" class="profile-photo">
+                <h1 id="profile-name">Jesudass Moses</h1>
+                <p id="profile-role">Aspiring Full-Stack Developer</p>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to get in touch with me via email or connect on LinkedIn.</p>
+            <p>Email: <a href="mailto:jesudass06062006@gmail.com" id="email-link">jesudass06062006@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/jesudass-moses-716190278/" target="_blank" id="linkedin-link">linkedin.com/in/jesudass-moses-716190278</a></p>
+            <button onclick="showPopup(event)">Say Hello!</button>
+        </div>
+    </section>
+
+    <div class="popup" id="popup">
+        <p>Thank you for visiting my portfolio! Feel free to reach out.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jesudass Moses. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPopup(event) {
+            event.preventDefault(); // Prevent default action if needed
+            document.getElementById('popup').style.display = 'block';
+        }
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

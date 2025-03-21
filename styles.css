@@ -1,0 +1,330 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+/* Container for centering content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Section Styling */
+header {
+    background-color: #2c3e50;  /* Dark Blue-Grey */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    animation: slideInTop 1s ease-out;
+}
+
+header .profile {
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1.5s ease-out;
+}
+
+p#profile-role {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 1.2em;
+    animation: fadeIn 1s ease-out;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #2980b9;  /* Light Blue */
+    color: white;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    background-color: #ecf0f1;  /* Light Gray */
+}
+
+/* Section Heading Styling */
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2c3e50;  /* Dark Blue */
+    transition: color 0.3s ease;
+    animation: slideInLeft 1s ease-out;
+}
+
+section h2:hover {
+    color: #2980b9; /* Change color on hover */
+}
+
+/* About Section */
+#about {
+    background-color: #fff;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: center;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+/* Education Section */
+#education {
+    background-color: #fff;
+}
+
+.card {
+    background-color: #3498db; /* Blue */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    animation: popUp 0.5s ease-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card p {
+    font-size: 1.2em;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #fff;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.skills-container div {
+    background-color: #2980b9;  /* Blue */
+    color: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.skills-container div:hover {
+    background-color: #3498db;  /* Lighter Blue */
+    transform: translateY(-5px);
+}
+
+/* Experience Section */
+#experience {
+    background-color: #fff;
+}
+
+.card-experience {
+    background-color: #27ae60; /* Green */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    animation: popUp 0.5s ease-out;
+}
+
+.card-experience:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+#contact {
+    background-color: #fff;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#contact a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+#contact a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2c3e50;  /* Dark Blue-Grey */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Keyframe for fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframe for fadeInUp animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe for slideInLeft animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframe for slideInTop animation */
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe for pop-up animation */
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    #about p {
+        font-size: 1em;
+    }
+
+    .skills-container div {
+        width: 100%;
+        padding: 15px 20px;
+    }
+}
